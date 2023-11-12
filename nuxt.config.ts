@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
   ],
+  css: [
+    '@/public/style.css',
+  ],
 });
