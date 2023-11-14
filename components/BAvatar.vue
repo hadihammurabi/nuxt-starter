@@ -13,5 +13,5 @@ const sizeClass = computed(() => ({
 </script>
 
 <template>
-  <img :class="sizeClass" class="rounded-full overflow-hidden object-cover" :src="src" />
+  <NuxtImg :class="sizeClass" class="rounded-full overflow-hidden object-cover" :src="src" />
 </template>
