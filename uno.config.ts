@@ -20,7 +20,8 @@ export default defineConfig({
     presetWebFonts({
       provider: 'google',
       fonts: {
-        sans: 'Poppins',
+        sans: 'Poppins:400',
+        'sans-bold': 'Poppins:700',
       },
     }),
   ],
