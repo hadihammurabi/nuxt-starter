@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core';
 
+defineEmits(['profileClick']);
+
 const ww = useBreakpoints(breakpointsTailwind);
 </script>
 
@@ -15,7 +17,7 @@ const ww = useBreakpoints(breakpointsTailwind);
       <input type="text" class="form-input" v-if="ww.lg.value" placeholder="Search...">
       <Button size="icon" v-else><div class="i-uil-search"></div></Button>
 
-      <Avatar src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3.jpg" size="sm" />
+      <Avatar src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3.jpg" size="sm" @click="$emit('profileClick')" />
     </div>
   </header>
 </template>
