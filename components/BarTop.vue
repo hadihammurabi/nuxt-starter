@@ -15,11 +15,11 @@ const ww = useBreakpoints(breakpointsTailwind);
     </div>
     <div class="flex space-x-3">
       <input type="text" class="form-input" v-if="ww.lg.value" placeholder="Search...">
-      <Button size="icon" v-else><div class="i-uil-search"></div></Button>
+      <BButton size="icon" v-else><div class="i-uil-search"></div></BButton>
 
-      <Button size="icon" @click="$emit('notifClick')"><div class="i-uil-bell"></div></Button>
+      <BButton size="icon" @click="$emit('notifClick')"><div class="i-uil-bell"></div></BButton>
 
-      <Avatar src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3.jpg" size="sm" @click="$emit('profileClick')" />
+      <BAvatar src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3.jpg" size="sm" @click="$emit('profileClick')" />
     </div>
   </header>
 </template>
