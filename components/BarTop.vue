@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { useBreakpoints, breakpointsTailwind } from '@vueuse/core';
+
+const ww = useBreakpoints(breakpointsTailwind);
+</script>
+
 <template>
   <header class="shadow-sm flex justify-between items-center px-5 py-2.5">
     <div>
@@ -6,7 +12,9 @@
       </NuxtLink>
     </div>
     <div class="flex space-x-3">
-      <input type="text" class="form-input" placeholder="search...">
+      <input type="text" class="form-input" v-if="ww.lg.value" placeholder="Search...">
+      <Button size="icon" v-else><div class="i-uil-search"></div></Button>
+
       <Avatar src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3.jpg" size="sm" />
     </div>
   </header>
